@@ -31,7 +31,7 @@ var delta = opt.e.deltaY;
 var zoom = canvas.getZoom();
 zoom *= 0.999 ** delta;
 if (zoom > 20) zoom = 20;
-if (zoom < 0.01) zoom = 0.01;
+if (zoom < 1) zoom = 1;
 canvas.zoomToPoint({ x: opt.e.offsetX, y: opt.e.offsetY }, zoom);
 opt.e.preventDefault();
 opt.e.stopPropagation();
@@ -47,8 +47,8 @@ if (zoom < 400 / 1000) {
   }
   if (vpt[5] >= 0) {
     vpt[5] = 0;
-  } else if (vpt[5] < canvas.getHeight() - 1000 * zoom) {
-    vpt[5] = canvas.getHeight() - 1000 * zoom;
+  } else if (vpt[5] < canvas.getHeight() - 600 * zoom) {
+    vpt[5] = canvas.getHeight() - 600 * zoom;
   }
 }
 });
