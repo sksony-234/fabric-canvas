@@ -47,8 +47,8 @@ if (zoom < 400 / 1000) {
   }
   if (vpt[5] >= 0) {
     vpt[5] = 0;
-  } else if (vpt[5] < canvas.getHeight() - 600 * zoom) {
-    vpt[5] = canvas.getHeight() - 600 * zoom;
+  } else if (vpt[5] < canvas.getHeight() - 700 * zoom) {
+    vpt[5] = canvas.getHeight() - 700 * zoom;
   }
 }
 });
